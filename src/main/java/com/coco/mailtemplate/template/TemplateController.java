@@ -1,4 +1,4 @@
-package com.mailtemplate.template;
+package com.coco.mailtemplate.template;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

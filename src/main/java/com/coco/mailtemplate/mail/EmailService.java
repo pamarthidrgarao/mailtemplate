@@ -1,4 +1,4 @@
-package com.mailtemplate.mail;
+package com.coco.mailtemplate.mail;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -12,8 +12,8 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
-import com.mailtemplate.template.Template;
-import com.mailtemplate.template.TemplateService;
+import com.coco.mailtemplate.template.Template;
+import com.coco.mailtemplate.template.TemplateService;
 
 @Service
 public class EmailService {

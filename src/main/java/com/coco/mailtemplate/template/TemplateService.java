@@ -1,4 +1,4 @@
-package com.mailtemplate.template;
+package com.coco.mailtemplate.template;
 
 public interface TemplateService {
 

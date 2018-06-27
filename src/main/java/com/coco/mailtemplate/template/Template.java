@@ -1,4 +1,4 @@
-package com.mailtemplate.template;
+package com.coco.mailtemplate.template;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.mailtemplate.template;
+package com.coco.mailtemplate.template;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +21,7 @@ public class TemplateServiceImpl implements TemplateService {
 	@Override
 	public Template getTemplateById(Integer id) {
 		logger.debug("getTemplateById called");
-		return templateRepository.findById(id).orElse(null);
+		return templateRepository.findOne(id);
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class TemplateServiceImpl implements TemplateService {
 	@Override
 	public void deleteTemplate(Integer id) {
 		logger.debug("deleteTemplate called");
-		templateRepository.deleteById(id);
+		templateRepository.delete(id);
 	}
 
 	@Override

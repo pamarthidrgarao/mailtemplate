@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: emailTemplate
+  mail:
+     default-encoding: UTF-8
+     host: smtp.gmail.com
+     username: pamarthidurgarao1@gmail.com
+     password: Welcome@1
+     port: 587
+     protocol: smtp
+     test-connection: false
+     properties:
+        mail:
+           smtp:
+              auth: true
+              starttls:
+                 enable: true
+server:
+  port: 8281
+
+api:
+  base-path: api
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: INFO
+    com.netflix: WARN
+    org.springframework.cloud: WARN
+  path: c:/
+  file: ${logging.path}/configService.log
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_URL:http://localhost:8761}/eureka/ #comment out for standalone mode
+    registry-fetch-interval-seconds: 6
+    instance-info-replication-interval-seconds: 6
+    register-with-eureka: true #set to false for standalone mode
+    fetch-registry: true #set to false for standalone mode
+    heartbeat-executor-thread-pool-size: 5
+    eureka-service-url-poll-interval-seconds: 10
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 20
+    prefer-ip-address: true
+
+
+#Dev database (used for local deployment)
+cocoon.db:
+  url: jdbc:postgresql://stkdevtestpg.cnzbcgjmxcsu.us-west-2.rds.amazonaws.com/cocodata
+  username: cocouser
+  password: e4867ca93ff66e8f528a1e1aa1104912
+  key: 0650b8d7e552e14b39f309ba93ce85f2
+

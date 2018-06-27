@@ -1,4 +1,4 @@
-package com.mailtemplate.mail;
+package com.coco.mailtemplate.mail;
 
 import java.io.IOException;
 
